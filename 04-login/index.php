@@ -8,7 +8,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username'] ?? '');
     $password = $_POST['password'] ?? '';
 
-    // 1. Validar datos recibidos
     if ($username === '') {
         $errors[] = 'El usuario es obligatorio.';
     }
@@ -17,13 +16,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if (count($errors) === 0) {
-        // 2. Buscar usuario
+        
         $user = userExists($username, $users);
 
         if ($user === false) {
             $errors[] = 'El usuario no existe.';
         } elseif (!$user->login($password)) {
-            // 3. Comprobar contraseña
             $errors[] = 'Contraseña incorrecta.';
         } else {
             $message = "Login correcto. Bienvenido, $user";

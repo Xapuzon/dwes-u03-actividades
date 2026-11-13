@@ -1,5 +1,4 @@
 <?php
-// Si tu profesor te da su propio userList.inc.php, usa el suyo.
 require_once __DIR__ . '/User.inc.php';
 
 $users = [

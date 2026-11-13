@@ -45,7 +45,7 @@ class Tarjeta extends Pago
 
     public function detalle(): string
     {
-        // Solo mostramos los 4 últimos dígitos
+    
         return "Tarjeta de {$this->titular} terminada en " . substr($this->numero, -4);
     }
 }

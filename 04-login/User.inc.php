@@ -37,7 +37,7 @@ class User
     }
 }
 
-// Devuelve el User con ese nombre o false si no existe
+
 function userExists(string $username, array $users): mixed
 {
     foreach ($users as $user) {

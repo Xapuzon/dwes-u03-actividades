@@ -8,14 +8,14 @@ class Pedido
 {
     use Accessors;
 
-    protected array $lineas = []; // composición: las líneas viven dentro del pedido
+    protected array $lineas = []; 
     protected ?Pago $pago = null;
 
     public function __construct(protected Cliente $cliente, protected string $fecha)
     {
     }
 
-    // El pedido crea sus propias líneas (composición)
+    
     public function addLinea(Producto $producto, int $cantidad): void
     {
         $this->lineas[] = new LineaPedido($producto, $cantidad);
@@ -26,7 +26,7 @@ class Pedido
         $this->pago = $pago;
     }
 
-    // Ampliación: importe total
+  
     public function total(): float
     {
         $total = 0.0;
