@@ -6,7 +6,7 @@ class GrandPrix
 {
     use Accessors;
 
-    protected array $results = []; // posición => Rider
+    protected array $results = [];
 
     public function __construct(
         protected string $name,
@@ -15,7 +15,6 @@ class GrandPrix
     ) {
     }
 
-    // Si la posición ya está ocupada, no se añade
     public function addRider(int $position, Rider $rider): bool
     {
         if (isset($this->results[$position])) {
@@ -25,7 +24,6 @@ class GrandPrix
         return true;
     }
 
-    // Resultados ordenados por posición
     public function getResults(): array
     {
         $results = $this->results;

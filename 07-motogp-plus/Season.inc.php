@@ -15,7 +15,6 @@ class Season
         $this->grandPrix[] = $gp;
     }
 
-    // Clasificación de una carrera: [posición => [piloto, puntos]]
     public function raceRanking(GrandPrix $gp): array
     {
         $ranking = [];
@@ -25,7 +24,6 @@ class Season
         return $ranking;
     }
 
-    // Clasificación general: [piloto => puntos], de más a menos
     public function generalRanking(): array
     {
         $totals = [];

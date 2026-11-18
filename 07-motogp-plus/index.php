@@ -2,7 +2,6 @@
 require_once __DIR__ . '/Season.inc.php';
 echo '<meta charset="UTF-8">';
 
-// Datos de ejemplo (los mismos tipos de objetos de la actividad 6)
 $bagnaia = new Rider('Francesco Bagnaia', 29, 'Italia', 1);
 $bastianini = new Rider('Enea Bastianini', 27, 'Italia', 23);
 $quartararo = new Rider('Fabio Quartararo', 27, 'Francia', 20);
